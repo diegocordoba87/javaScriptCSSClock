@@ -65,13 +65,19 @@
       transform-origin: 100%; /* this will make the handle rotate on its farthes right hand point*/
       transform: rotate(90deg); /* this will rotate the handles to start at 12:00*/
       transition: all 0,05s;
-      transition-timing-function: cubic-bezier(0.1) /* added transition and timing function to give it a more realistic ticking motion"
+      transition-timing-function: cubic-bezier(0.1) /* added transition and timing function to give it a more realistic ticking motion*/
     }
 
   </style>
-
+    
   <script>
+      function setDate(){
+         const now = new Date()
+         const seconds = now.getSeconds()
+         console.log(seconds)
+      }
 
+      setInterval(setDate, 1000);
 
   </script>
 </body>
